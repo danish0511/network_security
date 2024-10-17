@@ -22,12 +22,12 @@ from networksecurity.entity.config_entity import (
 )
 
 from networksecurity.entity.artifact_entity import (
-    DataIngestionConfig,
-    DataValidationConfig,
-    DataTransformationConfig,
-    ModelTrainerConfig,
-    ModelEvaluationConfig,
-    ModelPusherConfig,
+    DataIngestionArtifact,
+    DataValidationArtifact,
+    DataTransformationArtifact,
+    ModelTrainerArtifact,
+    ModelEvaluationArtifact,
+    ModelPusherArtifact
 )
 
 class TrainingPipeline:
