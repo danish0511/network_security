@@ -14,3 +14,4 @@ Requires-Dist: scikit-learn
 Requires-Dist: dill
 Requires-Dist: pyyaml
 Requires-Dist: xgboost
+Requires-Dist: fastapi
