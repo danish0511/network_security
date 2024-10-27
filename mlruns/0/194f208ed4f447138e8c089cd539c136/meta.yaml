@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/network_security/mlruns/0/194f208ed4f447138e8c089cd539c136/artifacts
+end_time: 1730056903523
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 194f208ed4f447138e8c089cd539c136
+run_name: indecisive-pig-769
+run_uuid: 194f208ed4f447138e8c089cd539c136
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1730056897667
+status: 3
+tags: []
+user_id: dsdd

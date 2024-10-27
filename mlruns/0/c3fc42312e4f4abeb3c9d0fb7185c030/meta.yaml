@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/network_security/mlruns/0/c3fc42312e4f4abeb3c9d0fb7185c030/artifacts
+end_time: 1730056339849
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c3fc42312e4f4abeb3c9d0fb7185c030
+run_name: crawling-cow-388
+run_uuid: c3fc42312e4f4abeb3c9d0fb7185c030
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1730056333371
+status: 3
+tags: []
+user_id: dsdd
