@@ -1,7 +1,5 @@
-Artifacts
-saved_models
 venv
-notebook
+notebooks
 .git
 Network_Data
 logs
