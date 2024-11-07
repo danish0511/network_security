@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/network_security/mlruns/0/b898b45d626d453b942a3080780db83b/artifacts
+end_time: 1730863593980
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b898b45d626d453b942a3080780db83b
+run_name: lyrical-fawn-737
+run_uuid: b898b45d626d453b942a3080780db83b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1730863586686
+status: 3
+tags: []
+user_id: dsdd
