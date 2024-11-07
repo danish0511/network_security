@@ -1,36 +1,17 @@
 FROM python:3.10-slim-buster
-
-# Set root user for the initial setup
 USER root
-
-# Create application directory
 RUN mkdir /app
-WORKDIR /app
-
-# Copy application files
 COPY . /app/
-
-# Install dependencies
-RUN pip3 install --no-cache-dir -r requirements.txt
-
-# Set environment variables
-ENV AWS_DEFAULT_REGION="us-east-1" \
-    BUCKET_NAME="networksecuritybucket1" \
-    PREDICTION_BUCKET_NAME="my-network-datasource" \
-    AIRFLOW_HOME="/app/airflow" \
-    AIRFLOW_CORE_DAGBAG_IMPORT_TIMEOUT=1000 \
-    AIRFLOW_CORE_ENABLE_XCOM_PICKLING=True
-
-# Update and install dependencies
-RUN apt-get update -y && \
-    apt-get install -y --no-install-recommends bash && \
-    rm -rf /var/lib/apt/lists/*
-
-# Initialize Airflow database and create admin user
-RUN airflow db init && \
-    airflow users create -e dsdd0511@gmail.com -f danish -l sharma -p admin -r Admin -u admin
-
-# Ensure start.sh is executable
+WORKDIR /app/
+RUN pip3 install -r requirements.txt
+ENV AWS_DEFAULT_REGION = "us-east-1"
+ENV BUCKET_NAME="networksecuritybucket1"
+ENV PREDICTION_BUCKET_NAME="my-network-datasource"
+ENV AIRFLOW_HOME="/app/airflow"
+ENV AIRFLOW_CORE_DAGBAG_IMPORT_TIMEOUT=1000
+ENV AIRFLOW_CORE_ENABLE_XCOM_PICKLING=True
+RUN airflow db init
+RUN airflow users create -e dsdd0511@gmail.com -f danish -l sharma -p admin -r Admin -u admin
 RUN chmod 777 start.sh
 RUN apt update -y
 ENTRYPOINT [ "/bin/sh" ]
