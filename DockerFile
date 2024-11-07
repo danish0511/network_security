@@ -15,7 +15,7 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 
 # Set environment variables
 ENV AWS_DEFAULT_REGION="us-east-1" \
-    BUCKET_NAME="mynetworksecurity" \
+    BUCKET_NAME="networksecuritybucket1" \
     PREDICTION_BUCKET_NAME="my-network-datasource" \
     AIRFLOW_HOME="/app/airflow" \
     AIRFLOW_CORE_DAGBAG_IMPORT_TIMEOUT=1000 \
@@ -31,7 +31,7 @@ RUN airflow db init && \
     airflow users create -e dsdd0511@gmail.com -f danish -l sharma -p admin -r Admin -u admin
 
 # Ensure start.sh is executable
-RUN chmod +x /app/start.sh
-
-# Set entrypoint to use start.sh
-ENTRYPOINT ["/bin/sh", "-c", "/app/start.sh"]
+RUN chmod 777 start.sh
+RUN apt update -y
+ENTRYPOINT [ "/bin/sh" ]
+CMD ["start.sh"]
