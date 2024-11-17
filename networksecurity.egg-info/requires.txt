@@ -14,3 +14,4 @@ ipykernel
 apache-airflow
 mlflow
 dvc
+python-multipart

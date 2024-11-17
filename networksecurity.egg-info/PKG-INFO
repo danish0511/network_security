@@ -20,3 +20,4 @@ Requires-Dist: ipykernel
 Requires-Dist: apache-airflow
 Requires-Dist: mlflow
 Requires-Dist: dvc
+Requires-Dist: python-multipart
